@@ -1,4 +1,4 @@
-package src.Lesson002.Home;
+package Lesson002.Home;
 
 import java.io.IOException;
 
