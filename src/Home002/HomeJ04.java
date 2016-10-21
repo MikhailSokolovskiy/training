@@ -1,4 +1,4 @@
-package Lesson002.Home;
+package Home002;
 
 import java.io.BufferedReader;
 import java.io.IOException;

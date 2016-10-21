@@ -1,4 +1,4 @@
-package Lesson001.Home;
+package Home001;
 
 import java.util.stream.IntStream;
 
