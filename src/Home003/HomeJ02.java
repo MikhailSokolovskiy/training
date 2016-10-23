@@ -25,14 +25,14 @@ public class HomeJ02 {
             }
         } while (sort);
 
-        System.out.print("On increase: ");
+        System.out.println("On increase: ");
         for (String number : str) {
-            System.out.print(number + " ");
+            System.out.println(number + " - " + number.length());
         }
 
-        System.out.print("\nOn decrease: ");
+        System.out.println("\nOn decrease: ");
         for (int i = str.length - 1; i >= 0; i--) {
-            System.out.print(str[i] + " ");
+            System.out.print(str[i] + " - " + str[i].length());
         }
     }
 }
