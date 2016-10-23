@@ -27,6 +27,7 @@ public class HomeJ09 {
         rotate90(mat);
         rotate180(mat);
         rotate270(mat);
+        newMatSubArifAver(mat);
 
     }
 
@@ -130,7 +131,7 @@ public class HomeJ09 {
             n++;
         }
         System.arraycopy(temp, 0, mat, 0, mat.length);
-        printMat(mat, "it is turned by 90 degrees against hour");
+        printMat(mat, "It is turned by 90 degrees against hour");
     }
 
     public static void rotate180(int[][] mat) {
@@ -146,7 +147,7 @@ public class HomeJ09 {
             n++;
         }
         System.arraycopy(temp, 0, mat, 0, mat.length);
-        printMat(mat, "it is turned by 180 degrees against hour");
+        printMat(mat, "It is turned by 180 degrees against hour");
     }
 
     public static void rotate270(int[][] mat) {
@@ -162,7 +163,24 @@ public class HomeJ09 {
             n++;
         }
         System.arraycopy(temp, 0, mat, 0, mat.length);
-        printMat(mat, "it is turned by 270 degrees against hour");
+        printMat(mat, "It is turned by 270 degrees against hour");
+    }
+
+    public static void newMatSubArifAver(int[][] mat) {
+        int[][] temp = new int[mat[0].length][mat.length];
+
+        for (int i = 0; i < mat.length; i++) {
+            int aver = 0;
+            for (int j = 0; j < mat.length; j++) {
+                aver += mat[i][j];
+            }
+            aver = aver / mat.length;
+            for (int j = 0; j < mat.length; j++) {
+                temp[i][j] = mat[i][j] - aver;
+            }
+        }
+        System.arraycopy(temp, 0, mat, 0, mat.length);
+        printMat(mat, "It is new matrix, subtraction of an arithmetic average");
     }
 }
 
