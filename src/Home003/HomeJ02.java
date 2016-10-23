@@ -32,7 +32,7 @@ public class HomeJ02 {
 
         System.out.println("\nOn decrease: ");
         for (int i = str.length - 1; i >= 0; i--) {
-            System.out.print(str[i] + " - " + str[i].length());
+            System.out.println(str[i] + " - " + str[i].length());
         }
     }
 }
