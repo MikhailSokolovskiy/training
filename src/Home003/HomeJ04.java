@@ -12,11 +12,10 @@ public class HomeJ04 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] str = reader.readLine().split(" ");
         int resultIndex = 0;
-        int res1;
-        int res2 = -100;
+        int res2 = -50;
 
         for (int a = 0; a < str.length; a++) {
-            res1 = 0;
+            int res1 = 0;
             for (int i = 0; i < str[a].length(); i++) {
                 for (int j = 0; j < str[a].length(); j++) {
                     if (str[a].charAt(i) != str[a].charAt(j)) {
