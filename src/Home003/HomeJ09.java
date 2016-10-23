@@ -26,6 +26,7 @@ public class HomeJ09 {
         moveRLUD(mat, 2);
         rotate90(mat);
         rotate180(mat);
+        rotate270(mat);
 
     }
 
@@ -146,6 +147,22 @@ public class HomeJ09 {
         }
         System.arraycopy(temp, 0, mat, 0, mat.length);
         printMat(mat, "it is turned by 180 degrees against hour");
+    }
+
+    public static void rotate270(int[][] mat) {
+        int[][] temp = new int[mat[0].length][mat.length];
+
+        int n = 0;
+        for (int i = 0; i < mat.length; i++) {
+            int k = 0;
+            for (int j = mat.length - 1; j >= 0; j--) {
+                temp[n][k] = mat[j][i];
+                k++;
+            }
+            n++;
+        }
+        System.arraycopy(temp, 0, mat, 0, mat.length);
+        printMat(mat, "it is turned by 270 degrees against hour");
     }
 }
 
