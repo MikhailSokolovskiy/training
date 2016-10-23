@@ -24,7 +24,6 @@ public class HomeJ04 {
                     } else {
                         quan[a] -= 1;
                     }
-
                 }
             }
             if (quan[a] > q) {
