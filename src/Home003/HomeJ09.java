@@ -3,6 +3,7 @@ package Home003;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 import static java.lang.Math.*;
 
@@ -28,6 +29,8 @@ public class HomeJ09 {
         rotate180(mat);
         rotate270(mat);
         newMatSubArifAver(mat);
+        //compMatrix(mat);
+        zeroEnd(mat);
 
     }
 
@@ -181,6 +184,33 @@ public class HomeJ09 {
         }
         System.arraycopy(temp, 0, mat, 0, mat.length);
         printMat(mat, "It is new matrix, subtraction of an arithmetic average");
+    }
+
+    public static void compMatrix(int[][] mat) {
+        int[][] temp = new int[mat[0].length][mat.length];
+
+        System.arraycopy(temp, 0, mat, 0, mat.length);
+        printMat(mat, "The compressed");
+    }
+
+    public static void zeroEnd(int[][] mat) {
+
+        for (int i = 0; i < mat.length; i++) {
+            boolean sort;
+            do {
+                sort = false;
+                for (int j = mat.length - 1; j > 0; j--) {
+                    if (mat[i][j - 1] == 0) {
+                        int temp = mat[i][j];
+                        mat[i][j] = mat[i][j - 1];
+                        mat[i][j - 1] = temp;
+                        sort = true;
+                    }
+                }
+            }
+            while (sort);
+        }
+        printMat(mat, "Is zero number in end");
     }
 }
 
