@@ -211,4 +211,21 @@ public class HomeJ09 {
         }
         printMat(mat, "Is zero number in end");
     }
+
+    public static void numIncreDecr(int[][] mat) {
+        int elIndInc = 0;
+        int sizeInc = 0;
+        int elIndDec = 0;
+        int sizeDec = 0;
+
+        for (int i = 0; i < mat.length -; i++) {
+            for (int j = 0; j < mat.length - 1; j++) {
+                if (mat[i][j] > mat[i][j + 1] ) {
+                    sizeInc++;
+                }
+            }
+        }
+
+        printMat(mat, "The greatest number of the increasing (decreasing) elements");
+    }
 }
