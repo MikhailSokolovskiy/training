@@ -3,9 +3,8 @@ package Home003;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-import static java.lang.Math.*;
+import static java.lang.Math.random;
 
 /**
  * Created by m.sokolovskiy on 23.10.2016.
