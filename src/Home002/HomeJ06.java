@@ -24,7 +24,7 @@ public class HomeJ06 {
 
         evenUnEvenn(num);
         devBy39(conArrayS);
-        devBy57(num, conArrayS);
+        devBy57(num);
         uniqThree(conArrayS);
         happyNum(num);
         equalHalfSum(num);
@@ -61,7 +61,7 @@ public class HomeJ06 {
         System.out.printf("Divisible by 3 or 9: %s\n\n", res1);
     }
 
-    public static void devBy57(int[] num, String[] str) {
+    public static void devBy57(int[] num) {
         String res1 = "";
         for (int i : num) {
             if (i % 5 == 0 && i % 7 == 0) {
