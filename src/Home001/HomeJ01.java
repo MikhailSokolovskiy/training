@@ -1,7 +1,5 @@
 package Home001;
 
-import java.util.stream.IntStream;
-
 /**
  * Created by m.sokolovskiy on 11.10.2016.
  */
