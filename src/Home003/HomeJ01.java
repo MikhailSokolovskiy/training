@@ -23,7 +23,6 @@ public class HomeJ01 {
                 max = i;
             }
         }
-
         System.out.printf("Length of numbers:\n   minNumLen: %s (Len %s)\n   maxNumLen: %s (Len %s)", str[min], str[min].length(), str[max], str[max].length());
     }
 }
