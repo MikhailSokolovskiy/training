@@ -74,9 +74,7 @@ public class HomeJ06 {
     public static void uniqThree(String[] str) {
         String res1 = "";
 
-        for (String s : str)
-
-        {
+        for (String s : str) {
             if (Integer.parseInt(s) >= 100 && Integer.parseInt(s) <= 999) {
                 if (s.charAt(0) != s.charAt(1) && s.charAt(0) != s.charAt(2) && s.charAt(1) != s.charAt(2)) {
                     res1 += s + " ";
