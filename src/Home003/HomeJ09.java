@@ -207,17 +207,18 @@ public class HomeJ09 {
             do {
                 sort = false;
                 for (int j = mat.length - 1; j > 0; j--) {
-                    if (mat[i][j - 1] == 0) {
+                    if (mat[i][j - 1] == 0 && mat[i][j] != 0) {
                         int temp = mat[i][j];
                         mat[i][j] = mat[i][j - 1];
                         mat[i][j - 1] = temp;
                         sort = true;
-                    }
+                    } else continue;
                 }
             }
             while (sort);
         }
         printMat(mat, "Is zero number in end");
+        System.out.println("co: " + co);
     }
 
     public static void numIncrDecr(int[][] mat) {
