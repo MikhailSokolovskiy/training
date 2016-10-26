@@ -218,7 +218,6 @@ public class HomeJ09 {
             while (sort);
         }
         printMat(mat, "Is zero number in end");
-        System.out.println("co: " + co);
     }
 
     public static void numIncrDecr(int[][] mat) {
