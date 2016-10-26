@@ -30,6 +30,7 @@ public class HomeJ09 {
         newMatSubArifAver(mat);
         //compMatrix(mat);
         zeroEnd(mat);
+        numIncrDecr(mat);
 
     }
 
@@ -41,6 +42,14 @@ public class HomeJ09 {
             }
             System.out.println();
         }
+    }
+
+    public static void printMat(int[] mat, String text, int start, int end) {
+        System.out.printf("\n%s matrix:\n", text);
+        for (int i = start; i <= start + end; i++) {
+            System.out.print(mat[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void incDec(int[][] mat) {
@@ -193,7 +202,6 @@ public class HomeJ09 {
     }
 
     public static void zeroEnd(int[][] mat) {
-
         for (int i = 0; i < mat.length; i++) {
             boolean sort;
             do {
@@ -212,20 +220,43 @@ public class HomeJ09 {
         printMat(mat, "Is zero number in end");
     }
 
-    public static void numIncreDecr(int[][] mat) {
-        int elIndInc = 0;
-        int sizeInc = 0;
-        int elIndDec = 0;
-        int sizeDec = 0;
+    public static void numIncrDecr(int[][] mat) {
+        int[] inc = {0, 0};
+        int stepInc = 0;
+        int[] dec = {0, 0};
+        int stepDec = 0;
+        int[] tArr = new int[mat.length * mat[0].length];
 
-        for (int i = 0; i < mat.length -; i++) {
-            for (int j = 0; j < mat.length - 1; j++) {
-                if (mat[i][j] > mat[i][j + 1] ) {
-                    sizeInc++;
-                }
-            }
+        for (int i = 0; i < mat.length; i++) {
+            System.arraycopy(mat[i], 0, tArr, (mat.length * i), mat[i].length - 1);
         }
 
-        printMat(mat, "The greatest number of the increasing (decreasing) elements");
+        for (int i = 0; i < tArr.length - 1; i++) {
+            if (tArr[i] < tArr[i + 1]) {
+                stepInc++;
+                if (inc[0] == 0) {
+                    inc[0] = i;
+                    inc[1] = stepInc;
+                } else if (stepInc > inc[1]) {
+                    inc[1] = stepInc;
+                }
+            } else {
+                stepInc = 0;
+            }
+
+            if (tArr[i] > tArr[i + 1]) {
+                stepDec++;
+                if (dec[0] == 0) {
+                    dec[0] = i;
+                    dec[1] = stepDec;
+                } else if (stepDec > dec[1]) {
+                    dec[1] = stepDec;
+                }
+            } else {
+                stepDec = 0;
+            }
+        }
+        printMat(tArr, "The greatest number of the increasing elements", inc[0], inc[1]);
+        printMat(tArr, "The greatest number of the decreasing elements", dec[0], dec[1]);
     }
 }
