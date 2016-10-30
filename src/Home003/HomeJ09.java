@@ -22,16 +22,16 @@ public class HomeJ09 {
         }
 
         printMat(mat, "The original");
-        incDec(mat);
-        moveRLUD(mat, 2);
-        rotate90(mat);
-        rotate180(mat);
-        rotate270(mat);
-        newMatSubArifAver(mat);
-        //compMatrix(mat);
-        zeroEnd(mat);
-        numIncrDecr(mat);
-
+        incDec(mat);            //1
+        moveRLUD(mat, 2);       //2
+        numIncrDecr(mat);       //3
+        //sumOneTwoEl(mat);     //4
+        rotate90(mat);          //5,1
+        rotate180(mat);         //2,5
+        rotate270(mat);         //5,3
+        newMatSubArifAver(mat); //6
+        //compMatrix(mat);      //7
+        zeroEnd(mat);           //8
     }
 
     public static void printMat(int[][] mat, String text) {
@@ -129,6 +129,38 @@ public class HomeJ09 {
             }
         }
         printMat(mat, "It is shifted in the down for " + k + " pos");
+    }
+
+    public static void sumOneTwoEl(int[][] mat) {
+        int sum = 0;
+        int fistInd = -1;
+        int secoInd = -1;
+        int step = 0;
+        printMat(mat, "The TestPrint");
+        for (int i = 0; i < mat.length; i++) {
+            if (mat[i].length > 2) {
+                sum = 0;
+                fistInd = -1;
+                secoInd = -1;
+                for (int j = 0; j < mat[i].length; j++) {
+                    step++;
+                    //System.out.print(step + "s ");
+                    if (mat[i][j] > 0 && fistInd == -1) {
+                        fistInd = j;
+                    } else if (mat[i][j] > 0 && fistInd != -1 && (j < mat[j].length & mat[j][i + 1] > 0)) {
+                        sum += mat[i][j];
+                        secoInd = j;
+                    } else if (mat[i][j] <= 0 && fistInd != -1) {
+                        break;
+                    }
+                }
+            }
+            //if (sum > 0 && secoInd - fistInd > 1) {
+            System.out.println(sum);
+            //}
+        }
+
+
     }
 
     public static void rotate90(int[][] mat) {
