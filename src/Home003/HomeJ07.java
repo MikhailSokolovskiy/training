@@ -13,7 +13,7 @@ public class HomeJ07 {
         String[] str = reader.readLine().split(" ");
 
         for (String st : str) {
-            boolean diff = true;
+            boolean diff = false;
             if (st.length() == 1) continue;
             for (int i = 0; i < st.length(); i++) {
                 for (int j = 0; j < st.length(); j++) {
@@ -21,6 +21,8 @@ public class HomeJ07 {
                     if (st.charAt(i) == st.charAt(j)) {
                         diff = false;
                         break;
+                    } else {
+                        diff = true;
                     }
                 }
             }
