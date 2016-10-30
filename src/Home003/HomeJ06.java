@@ -13,11 +13,13 @@ public class HomeJ06 {
         String[] str = reader.readLine().split(" ");
 
         for (String st : str) {
-            boolean asc = true;
+            boolean asc = false;
             for (int i = 0; i < st.length() - 1; i++) {
                 if ((int) st.charAt(i) + 1 != (int) st.charAt(i + 1)) {
                     asc = false;
                     break;
+                } else {
+                    asc = true;
                 }
             }
             if (asc) {
