@@ -9,9 +9,9 @@ import java.util.Random;
 public class Human {
     private boolean men;
     private String name;
-    private String surname;
-    private float height;
-    private float weight;
+    protected String surname;
+    protected float height;
+    protected float weight;
 
     Human(boolean men, String name, String surname, float height, float weight) {
         this.men = men;
