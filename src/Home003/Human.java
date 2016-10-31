@@ -7,14 +7,14 @@ import java.util.Random;
  * Created by m.sokolovskiy on 28.10.2016.
  */
 public class Human {
-    private boolean men;
+    private boolean man;
     private String name;
     protected String surname;
     protected float height;
     protected float weight;
 
-    Human(boolean men, String name, String surname, float height, float weight) {
-        this.men = men;
+    Human(boolean man, String name, String surname, float height, float weight) {
+        this.man = man;
         this.name = name;
         this.surname = surname;
         this.height = height;
@@ -25,9 +25,9 @@ public class Human {
         Random rnd = new Random();
         System.out.print("Speaking: ");
         boolean flag;
-        if (!this.men && !h.men) {
+        if (!this.man && !h.man) {
             flag = true;
-        } else if (this.men != h.men) {
+        } else if (this.man != h.man) {
             flag = true;
         } else {
             flag = rnd.nextInt(10) < 5;
@@ -40,9 +40,9 @@ public class Human {
         Random rnd = new Random();
         System.out.print("Tolerate: ");
         boolean flag;
-        if (!this.men && !h.men) {
+        if (!this.man && !h.man) {
             flag = rnd.nextInt(100) < 5;
-        } else if (this.men != h.men) {
+        } else if (this.man != h.man) {
             flag = rnd.nextInt(10) < 7;
         } else {
             flag = rnd.nextInt(1000) < 56;
@@ -67,9 +67,9 @@ public class Human {
     }
 
     Human relationship(Human h) throws IOException {
-        if (this.men != h.men) {
+        if (this.man != h.man) {
             if (this.say(h) && this.tolerate(h) && this.together(h)) {
-                if (this.men) {
+                if (this.man) {
                     return ((Woman) h).birth(this);
                 } else {
                     return ((Woman) this).birth(h);
@@ -82,7 +82,7 @@ public class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "men=" + men +
+                "man=" + man +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", height=" + height +

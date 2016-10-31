@@ -21,8 +21,8 @@ public class CompatibilityTest {
 
     static Human newHuman() throws IOException {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Input sex (men or women):");
-        boolean sex = r.readLine().equals("men") ? true : false;
+        System.out.println("Input sex (man or women):");
+        boolean sex = r.readLine().equals("man") ? true : false;
         System.out.println("Input name(s):");
         String name = r.readLine();
         System.out.println("Input surname(s):");
@@ -32,7 +32,7 @@ public class CompatibilityTest {
         System.out.println("Input weight(f):");
         float weight = Float.parseFloat(r.readLine());
         if (sex) {
-            return new Men(name, surname, height, weight);
+            return new Man(name, surname, height, weight);
         } else {
             return new Woman(name, surname, height, weight);
         }

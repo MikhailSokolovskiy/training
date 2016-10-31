@@ -22,7 +22,7 @@ public class Woman extends Human {
         if (rnd.nextInt(10) < 5) {
             float cHeight = h.height + 0.1f * (this.height - h.height);
             float cWeight = h.weight + 0.1f * (this.weight - h.weight);
-            return new Men(cName, cSurname, cHeight, cWeight);
+            return new Man(cName, cSurname, cHeight, cWeight);
         } else {
             float cHeight = this.height + 0.1f * (h.height - this.height);
             float cWeight = this.weight + 0.1f * (h.weight - this.weight);
