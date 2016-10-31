@@ -7,11 +7,23 @@ import java.util.Random;
  * Created by m.sokolovskiy on 28.10.2016.
  */
 public class Human {
-    private boolean man;
-    private String name;
-    protected String surname;
-    protected float height;
-    protected float weight;
+    private final boolean man;
+    private final String name;
+    private final String surname;
+    private final float height;
+    private final float weight;
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
 
     Human(boolean man, String name, String surname, float height, float weight) {
         this.man = man;

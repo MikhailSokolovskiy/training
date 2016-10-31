@@ -18,14 +18,14 @@ public class Woman extends Human {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input name of child:");
         String cName = r.readLine();
-        String cSurname = h.surname;
+        String cSurname = h.getSurname();
         if (rnd.nextInt(10) < 5) {
-            float cHeight = h.height + 0.1f * (this.height - h.height);
-            float cWeight = h.weight + 0.1f * (this.weight - h.weight);
+            float cHeight = h.getHeight() + 0.1f * (this.getHeight() - h.getHeight());
+            float cWeight = h.getWeight() + 0.1f * (this.getWeight() - h.getWeight());
             return new Man(cName, cSurname, cHeight, cWeight);
         } else {
-            float cHeight = this.height + 0.1f * (h.height - this.height);
-            float cWeight = this.weight + 0.1f * (h.weight - this.weight);
+            float cHeight = this.getHeight() + 0.1f * (h.getHeight() - this.getHeight());
+            float cWeight = this.getWeight() + 0.1f * (h.getWeight() - this.getWeight());
             return new Woman(cName, cSurname, cHeight, cWeight);
         }
     }
