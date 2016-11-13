@@ -27,7 +27,7 @@ public class HomeJ09 {
         numIncrDecr(mat);       //3
         //sumOneTwoEl(mat);     //4
         rotate90(mat);          //5,1
-        rotate180(mat);         //2,5
+        rotate180(mat);         //5,2
         rotate270(mat);         //5,3
         newMatSubArifAver(mat); //6
         //compMatrix(mat);      //7
