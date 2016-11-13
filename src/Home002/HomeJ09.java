@@ -164,7 +164,7 @@ public class HomeJ09 {
     }
 
     public static void rotate90(int[][] mat) {
-        int[][] temp = new int[mat[0].length][mat.length];
+        int[][] temp = new int[mat.length][mat.length];
 
         int n = 0;
         for (int j = mat.length - 1; j >= 0; j--) {
@@ -178,7 +178,7 @@ public class HomeJ09 {
     }
 
     public static void rotate180(int[][] mat) {
-        int[][] temp = new int[mat[0].length][mat.length];
+        int[][] temp = new int[mat.length][mat.length];
 
         int n = 0;
         for (int i = mat.length - 1; i >= 0; i--) {
@@ -194,7 +194,7 @@ public class HomeJ09 {
     }
 
     public static void rotate270(int[][] mat) {
-        int[][] temp = new int[mat[0].length][mat.length];
+        int[][] temp = new int[mat.length][mat.length];
 
         int n = 0;
         for (int i = 0; i < mat.length; i++) {
@@ -210,7 +210,7 @@ public class HomeJ09 {
     }
 
     public static void newMatSubArifAver(int[][] mat) {
-        int[][] temp = new int[mat[0].length][mat.length];
+        int[][] temp = new int[mat.length][mat.length];
 
         for (int i = 0; i < mat.length; i++) {
             int aver = 0;
@@ -227,7 +227,7 @@ public class HomeJ09 {
     }
 
     public static void compMatrix(int[][] mat) {
-        int[][] temp = new int[mat[0].length][mat.length];
+        int[][] temp = new int[mat.length][mat.length];
 
         System.arraycopy(temp, 0, mat, 0, mat.length);
         printMat(mat, "The compressed");
